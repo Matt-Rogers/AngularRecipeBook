@@ -1,0 +1,41 @@
+<br>
+<div class="container-fluid">
+	<div class="row">
+		<h2 style="text-align:center">Alright!</h2> 
+		<h2 style="text-align:center">Now what goes in it?</h2>
+		<br>
+		<div class="col-md-6">
+		<form class="well form-horizontal" role='form'>
+			<div class="form-group">
+				<label for="recipeIngredientName" class="col-sm-2 control-label">Ingredient</label>
+				<div class="col-sm-6">
+					<input type="text" class="form-control" id="recipeIngredientName" ng-model='ingredients.name' placeholder="Title">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="recipeIngredientAmount" class="col-sm-2 control-label" placeholder="">Amount</label>
+				<div class="col-sm-6">
+					<input type="text" class="form-control" ng-model="ingredients.amount" id="recipeIngredientAmount" ng-model="ingredients.amount" placeholder="Enter Amount">
+				</div>
+			</div>
+			<button type="submit" class="btn btn-primary" ng-click="addIngredient()">Add ingredient</button>
+		</form>
+		</div>
+		<div class="col-md-6">
+			<table class="table" ng-if="newRecipeData.ingredients.length > 0">
+				<tr>
+					<th>Ingredient</th>
+					<th>amount</th>
+					<th>Remove</th>
+				</tr>
+				<tr ng-repeat="ingredient in newRecipeData.ingredients">
+					<td> {{ingredient.name}}</td>
+					<td> {{ingredient.amount}}</td>
+					<td> <button class="button btn-danger" ng-click="removeIngredient(newRecipeData.ingredients, $index)"><i class="fa fa-minus"></i></button></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<button class="btn btn-primary btn-lg pull-right" ui-sref="create.directions">Add Directions <i class="fa fa-arrow-circle-right"></i></button>
+</div>

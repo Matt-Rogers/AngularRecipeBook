@@ -1,0 +1,1 @@
+var app = angular.module('Recipe-App', ['ui.router','ngAnimate', 'ui.bootstrap','uiRoutes', 'ModalService','RecipeFactory','RecipeController', 'recipeListItem', 'addItemsToRecipe']);

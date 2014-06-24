@@ -1,0 +1,28 @@
+<div class="col-md-6 selectedRecipeData" data-offset-top="-80" bs-affix>
+	<h2> {{recipe.title}}</h2>
+	<h3> {{recipe.description}}</h3>
+	<div>
+		<table class="table">
+				<tr>
+					<th>Ingredient</th>
+					<th>amount</th>
+				</tr>
+				<tr ng-repeat="ingredient in recipe.ingredients">
+					<td> {{ingredient.name}}</td>
+					<td> {{ingredient.amount}}</td>
+				</tr>
+			</table>
+	</div>
+	<div>
+		<table class="table">
+				<tr>
+					<th>Step</th>
+					<th>Direction</th>
+				</tr>
+				<tr ng-repeat="direction in recipe.directions">
+					<td>{{$index +1}}</td>
+					<td>{{direction.name}}</td>
+				</tr>
+			</table>
+	</div>
+</div>

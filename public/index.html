@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="Recipe-App">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/angular-motion.min">
+
+	<title>Internets Favorite Recipes!</title>
+</head>
+<body  ng-controller="RecipeCtrl">
+	<div>
+	<nav class="navbar navbar-inverse" role="navigation">
+		<a class="navbar-brand" href="#">IFR</a>
+
+			<ul class="nav navbar-nav">
+				<li><a ui-sref="home">Recipes</a> </li>
+				<li><a ui-sref="create">Create New Recipe</a></li>
+				<li><a ui-sref="about">About</a></li>
+			</ul>
+
+	</nav>
+	</div>
+		<div ui-view></div>
+</body>
+
+	<script type="text/javascript" src="js/angular.js"></script>
+	<script type="text/javascript" src="js/angular-ui-router.js"></script>
+	<script type="text/javascript" src="js/ui-bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/angular-animate.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/services/RecipeFactory.js"></script>
+	<script type="text/javascript" src="js/services/ModalService.js"></script>
+	<script type="text/javascript" src="js/controllers/RecipeCtrl.js"></script>
+	<script type="text/javascript" src="js/directives/addItemsToRecipe.js"></script>
+	<script type="text/javascript" src="js/directives/recipeListItem.js"></script>
+	<script type="text/javascript" src="js/routes/uiRoutes.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+</html>

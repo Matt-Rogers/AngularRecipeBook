@@ -1,0 +1,15 @@
+<div class="container">
+<div class="col-sm-8 col-sm-offset-2">
+<ul class="list-group">
+	<li class="list-group-item" ng-repeat='recipe in filteredRecipes'>				
+			<h2><a ng-href='#/home/{{recipe.title}}'>{{recipe.title}}</a></h2>
+			<h4>{{recipe.description}}</h4>
+			<button type="button" class="btn btn-lg btn-primary" ng-click="showRecipe()">Click to view Recipe</button>
+	</li>				
+</ul>
+<div data-pagination="" data-num-pages="numPages()" 
+      data-current-page="currentPage" data-max-size="maxSize"  
+      data-boundary-links="true"></div>
+</div>
+<div ui-view></div>
+</div>

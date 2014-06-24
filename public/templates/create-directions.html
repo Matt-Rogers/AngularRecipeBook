@@ -1,0 +1,35 @@
+<br>
+<div class="container-fluid">
+	<div class="row">
+		<h2 style="text-align:center">Awesome!</h2> 
+		<h2 style="text-align:center">Now boss us around!</h2>
+		<br>
+		<div class="col-md-6">
+		<form class="well form-horizontal" role='form'>
+			<div class="form-group">
+				<label for="recipeDirectionName" class="col-sm-2 control-label">Direction</label>
+				<div class="col-sm-8">
+					<textarea cols="500" rows="5" class="form-control" id="recipeDirectionName" ng-model="directions.name"></textarea>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-primary" ng-click="addDirection()">Add direction</button>
+		</form>
+		</div>
+		<div class="col-md-6">
+			<table class="table" ng-if="newRecipeData.directions.length > 0">
+				<tr>
+					<th>Step</th>
+					<th>Direction</th>
+					<th>Remove</th>
+				</tr>
+				<tr ng-repeat="direction in newRecipeData.directions">
+					<td>{{$index +1}}</td>
+					<td>{{direction.name}}</td>
+					<td> <button class="button btn-danger" ng-click="removeDirection(newRecipeData.directions, $index)"><i class="fa fa-minus"></i></button></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<button class="btn btn-primary btn-lg pull-right" ui-sref="create.submit">Review and Submit <i class="fa fa-arrow-circle-right"></i></button>
+</div>

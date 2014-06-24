@@ -1,0 +1,25 @@
+<br>
+<div class="container-fluid">
+	<div class="col-md-8 col-md-offset-2">
+		<h2 style="text-align:center">Hey!</h2> 
+		<h2 style="text-align:center">Enter some details about your recipe</h2>
+		<br>
+		<form class="well form-horizontal" role='form'>
+			<div class="form-group">
+				<label for="recipeTitle" class="col-sm-2 control-label">Title</label>
+				<div class="col-sm-5">
+					<input type='text' class="form-control" id="recipeTitle" ng-model='newRecipeData.title' placeholder="Title">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="recipeDescription" class="col-sm-2 control-label" placeholder="">Description</label>
+				<div class="col-sm-5">
+					<textarea rows="4" cols="50" class="form-control" id="recipeDescription" ng-model='newRecipeData.description'></textarea>
+				</div>
+			</div>
+
+			
+		</form>
+		<button class="btn btn-primary btn-lg pull-right" ui-sref="create.ingredients">Select Ingredients <i class="fa fa-arrow-circle-right"></i></button>
+	</div>
+</div>
